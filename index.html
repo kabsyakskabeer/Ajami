@@ -99,7 +99,7 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
         </span>
         
     </main>
-    <footer>Pharm. Kabiru Yakubu</footer>
+
     <script>
         //ɓ
         //ƙ
@@ -112,17 +112,29 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
     let b1 = document.getElementById("b1");
     let d1 = document.getElementById("d1");
     let k1 = document.getElementById("k1");
-
-  
+    let dic;
 
     y1.addEventListener("click", function(){
         latin.value += this.textContent;
        
-
     });
+
     b1.addEventListener("click", function(){
         latin.value += this.textContent;
        
+    });
+    window.addEventListener("load", function(){
+        fetch('dictionary.json')
+            .then(response => {
+                if (!response.ok) {
+                 throw new Error("HTTP error " + response.status);
+                }
+                    return response.text();
+            })
+            .then(dict => {
+                  console.log(dict); 
+                      
+            });
 
     });
     d1.addEventListener("click", function(){
@@ -138,7 +150,6 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
 
     converter.addEventListener("click", function(){
        ajami.innerText = aJamise(latin.value);
-      // console.log(latin.value);
     });
     function doGetCaretPosition (oField) {
 
