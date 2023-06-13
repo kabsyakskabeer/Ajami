@@ -133,7 +133,7 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
             })
             .then(dict => {
                 dic = JSON.parse(dict);
-                  console.log(dic.kabiru); 
+            
                       
             });
 
@@ -150,6 +150,8 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
     }); 
 
     converter.addEventListener("click", function(){
+        let str = latin.value;
+        console.log(str.split(' '));
        ajami.innerText = aJamise(latin.value);
     });
     function doGetCaretPosition (oField) {
