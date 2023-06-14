@@ -151,7 +151,10 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
 
     converter.addEventListener("click", function(){
         let str = latin.value;
-        console.log(str.split(' '));
+        let arr = (latin.value).split('');
+        console.log(arr.toString());
+        
+        
        ajami.innerText = aJamise(latin.value);
     });
     function doGetCaretPosition (oField) {
