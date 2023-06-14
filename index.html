@@ -113,6 +113,9 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
     let d1 = document.getElementById("d1");
     let k1 = document.getElementById("k1");
     let dic;
+    function isInArray(value, array) {
+        return array.indexOf(value) > -1;
+    }
 
     y1.addEventListener("click", function(){
         latin.value += this.textContent;
@@ -133,7 +136,6 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
             })
             .then(dict => {
                 dic = JSON.parse(dict);
-                console.log(dic);
             
                       
             });
@@ -155,10 +157,13 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
         let arr1 = str.split(' ');
         let arr2 = str.split(' ');
         
-        // for (let index = 0; index < arr1.length; index++) {
-        //     const element = arr1[index];
+        for (let index = 0; index < arr1.length; index++) {
+            const element = arr1[index];
+            if(isInArray(element,dic)){
+                console.log(`${element} is in array` );
+            }
             
-        // }
+        }
         
         
        ajami.innerText = aJamise(latin.value);
