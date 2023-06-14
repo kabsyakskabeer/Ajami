@@ -151,8 +151,9 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
 
     converter.addEventListener("click", function(){
         let str = latin.value;
-        let arr = (latin.value).split('');
-        console.log(arr.toString());
+        let arr1 = str.split(' ');
+        let arr2 = str.split(' ');
+        console.log(arr1);
         
         
        ajami.innerText = aJamise(latin.value);
