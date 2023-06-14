@@ -151,9 +151,16 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
 
     converter.addEventListener("click", function(){
         let str = latin.value;
-        let arr1 = str.split(' ');
-        let arr2 = str.split(' ');
-        console.log(arr1);
+        let arr1 = str.split('');
+        let arr2 = str.split('');
+        
+        for (let index = 0; index < arr1.length; index++) {
+            const element = arr1[index];
+            if(dic.element != null){
+                console.log(dic.element);
+            }
+            
+        }
         
         
        ajami.innerText = aJamise(latin.value);
