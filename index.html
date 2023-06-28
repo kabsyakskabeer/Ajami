@@ -30,17 +30,17 @@
   padding: 10px 21px;
   text-align: center;
   text-transform: none;
-  /* transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out; */
+  transition: color .13s ease-in-out, .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-#converter:active, {
+#converter:hover, #character:hover{
   background-color: #006AE8;
 }
 
-#textButton:hover #documentButton:hover {
+#converter:active #character:active {
   background-color: #1C84FF;
 }
 
@@ -98,10 +98,10 @@
         display: inline-block;
 
        }
-       .character{
+       /* .character{
             height: 3vh;
             width: 10vw;
-       }
+       } */
        
        /* #textButton{
         height: 3vh;
