@@ -116,6 +116,15 @@
        select{
         display: inline;
        }
+       * {
+        scrollbar-width: thin;
+        scrollbar-color: #0276FF;
+      }
+      
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        scrollbar-color: #0276FF;
+      }
        header{
         display: block;
   appearance: button;
