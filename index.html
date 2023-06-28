@@ -163,14 +163,25 @@
     }
 
     y1.addEventListener("click", function(){
-        latin.value += this.textContent;
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"ƴ");
        
     });
 
     b1.addEventListener("click", function(){
-        latin.value += this.textContent;
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"ɓ");
        
     });
+    d1.addEventListener("click", function(){
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"Ɗ");
+        ////+= this.textContent;
+       
+
+    });
+     k1.addEventListener("click", function(){
+        latin.value += tinsertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"ƙ");
+       
+
+    }); 
     window.addEventListener("load", function(){
         fetch('dictionary.json')
             .then(response => {
@@ -186,33 +197,25 @@
             });
 
     });
-    d1.addEventListener("click", function(){
-        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami),this.text);
-        ////+= this.textContent;
-       
-
-    });
-     k1.addEventListener("click", function(){
-        latin.value += this.textContent;
-       
-
-    }); 
+  
 
     converter.addEventListener("click", function(){
-        let str = latin.value;
-        let arr1 = str.split(' ');
-        let arr2 = str.split(' ');
+        ajami.textContent = "";
+        latin.value = "";
+    //     let str = latin.value;
+    //     let arr1 = str.split(' ');
+    //     let arr2 = str.split(' ');
         
-        for (let index = 0; index < arr1.length; index++) {
-            const element = arr1[index];
-            if(isInArray(element,dic)){
-             //   console.log(`${element} is in array its index is ${dic.indexOf(element)}` );
-             arr2[arr2.indexOf(element)] = dic[dic.indexOf(element) + 1];
-            }
+    //     for (let index = 0; index < arr1.length; index++) {
+    //         const element = arr1[index];
+    //         if(isInArray(element,dic)){
+    //          //   console.log(`${element} is in array its index is ${dic.indexOf(element)}` );
+    //          arr2[arr2.indexOf(element)] = dic[dic.indexOf(element) + 1];
+    //         }
             
-        }
+    //     }
          
-       ajami.innerText = aJamise(arr2.join(' '));
+    //    ajami.innerText = aJamise(arr2.join(' '));
     });
     function doGetCaretPosition (oField) {
 
