@@ -187,7 +187,7 @@
        
 
     });
-     k1.addEventListener("click", function(){
+    k1.addEventListener("click", function(){
         latin.value = tinsertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
        
 
@@ -210,22 +210,21 @@
   
 
     converter.addEventListener("click", function(){
-        ajami.textContent = "";
-        latin.value = "";
-    //     let str = latin.value;
-    //     let arr1 = str.split(' ');
-    //     let arr2 = str.split(' ');
+      
+        let str = latin.value;
+        let arr1 = str.split(' ');
+        let arr2 = str.split(' ');
         
-    //     for (let index = 0; index < arr1.length; index++) {
-    //         const element = arr1[index];
-    //         if(isInArray(element,dic)){
-    //          //   console.log(`${element} is in array its index is ${dic.indexOf(element)}` );
-    //          arr2[arr2.indexOf(element)] = dic[dic.indexOf(element) + 1];
-    //         }
+        for (let index = 0; index < arr1.length; index++) {
+            const element = arr1[index];
+            if(isInArray(element,dic)){
+             //   console.log(`${element} is in array its index is ${dic.indexOf(element)}` );
+             arr2[arr2.indexOf(element)] = dic[dic.indexOf(element) + 1];
+            }
             
-    //     }
+        }
          
-    //    ajami.innerText = aJamise(arr2.join(' '));
+       ajami.innerText = aJamise(arr2.join(' '));
     });
     function doGetCaretPosition (oField) {
 
@@ -1168,6 +1167,8 @@ return newString;
 }
 
 document.getElementById('clear').addEventListener('click',function(){
+    ajami.textContent = "";
+        latin.value = "";
         let myJson = [
         {
             "chapter": 1,
@@ -32350,16 +32351,16 @@ document.getElementById('clear').addEventListener('click',function(){
             "text": "Daga aljannu da mutane"
         }
         ];
-        let arr = [];
+        // let arr = [];
         
-        for (let index = 0; index < myJson.length; index++) {
-            const element = myJson[index];
-            element.text = aJamise(element.text);
-            arr.push(element);
+        // for (let index = 0; index < myJson.length; index++) {
+        //     const element = myJson[index];
+        //     element.text = aJamise(element.text);
+        //     arr.push(element);
 
             
-        }
-        console.log(arr);
+        // }
+        // console.log(arr);
 });
     </script>
 </body>
