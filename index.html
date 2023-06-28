@@ -53,17 +53,13 @@
 
 
 
-        body {
-             margin: 0px;
-            /* background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a); */
-        }
         @font-face {
             font-family: AlkalamiRW;
             src: url(Alkalami-Regular.woff2);
         }
         #ajami{
-            background-color: aliceblue;
-            border-width:0.5px;
+            
+            border-width:1px;
             border-style:solid;
             border-color:#1C84FF;;
             border-radius: 15px;
@@ -82,7 +78,7 @@
         #latin{
             overflow-y: scroll;
             overflow-x: scroll;
-            border-width:0.5px;
+            border-width:1px;
             border-style:solid;
             border-color:#1C84FF;
             border-radius: 15px;
@@ -94,17 +90,16 @@
             display: inline-block;
           
         }
-        #latin:hover{
+        #latin:active{
             border-style:solid;
             border-color:#1C84FF;
-            border-width:0.5px;
+            border-width:1px;
             padding: 20px;
 
         }
         #middle{
             display: inline-block;
-        
-
+    
         }
         
         
@@ -129,8 +124,6 @@
         height: 3vh;
             width: 18vw;
        } */
-       
-       
     </style>
     
 </head>
@@ -172,8 +165,16 @@
         return array.indexOf(value) > -1;
     }
 
+    y1.addEventListener("dblclick", function(){
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
+       
+    });
     y1.addEventListener("click", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
+       
+    });
+    b1.addEventListener("dblclick", function(){
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɓ");
        
     });
 
@@ -181,14 +182,25 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɓ");
        
     });
+    d1.addEventListener("dblclick", function(){
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɗ");
+        ////+= this.textContent;
+       
+
+    });
     d1.addEventListener("click", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɗ");
         ////+= this.textContent;
        
 
     });
+    k1.addEventListener("dblclick", function(){
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ƙ");
+       
+
+    }); 
     k1.addEventListener("click", function(){
-        latin.value = tinsertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
        
 
     }); 
