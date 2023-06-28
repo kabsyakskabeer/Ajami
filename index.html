@@ -10,7 +10,7 @@
 
 
 /* CSS */
-#textButton, #documentButton {
+#converter{
   align-items: center;
   appearance: button;
   background-color: #0276FF;
@@ -36,11 +36,11 @@
   touch-action: manipulation;
 }
 
-.button-22:active {
+#converter:active, {
   background-color: #006AE8;
 }
 
-.button-22:hover {
+#textButton:hover #documentButton:hover {
   background-color: #1C84FF;
 }
 
@@ -51,8 +51,8 @@
 
 
  body {
-margin: 0px;
-background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
+        margin: 0px;
+            /* background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a); */
 }
         @font-face {
             font-family: AlkalamiRW;
@@ -126,7 +126,7 @@ background-image: linear-gradient(to bottom right, #9dc1d1, #1f8f6a);
 <body>
     <header><h2>Hausa Ajami converter</h2></header>
     <main>
-        <div id="top"><button id="textButton"> text</button><button id ="documentButton">document</button></div>
+        <!-- <div id="top"><button id="textButton"> text</button><button id ="documentButton">document</button></div> -->
         <div id="middle">
             <textarea name="latina" id="latin" cols="30" rows="10"></textarea>
             
