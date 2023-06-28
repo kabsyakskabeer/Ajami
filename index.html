@@ -65,8 +65,8 @@
             background-color: aliceblue;
             border-width:0.3px;
             border-style:solid;
-            border-color:black;
-            border-radius: 20px;
+            border-color:#1C84FF;;
+            border-radius: 15px;
             font-family: AlkalamiRW, sans-serif; 
             width: 45vw;
             height: 40vh;
@@ -83,7 +83,8 @@
             overflow-x: scroll;
             border-width:0.3px;
             border-style:solid;
-            border-color:black;
+            border-color:#1C84FF;
+            border-radius: 15px;
             font-family: AlkalamiRW, sans-serif; 
             width: 45vw;
           
@@ -163,22 +164,22 @@
     }
 
     y1.addEventListener("click", function(){
-        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"ƴ");
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin)+1,"ƴ");
        
     });
 
     b1.addEventListener("click", function(){
-        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"ɓ");
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin)+1,"ɓ");
        
     });
     d1.addEventListener("click", function(){
-        latin.value = insertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"Ɗ");
+        latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin)+1,"Ɗ");
         ////+= this.textContent;
        
 
     });
      k1.addEventListener("click", function(){
-        latin.value += tinsertAtAjami(latin.value,doGetCaretPosition(ajami)+1,"ƙ");
+        latin.value += tinsertAtAjami(latin.value,doGetCaretPosition(latin) +1,"ƙ");
        
 
     }); 
