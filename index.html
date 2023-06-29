@@ -200,6 +200,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
         latin.focus()
         latin.setSelectionRange(pos, pos + 1);
+        latin.getSelection().collapse(true);
        
     });
     y1.addEventListener("click", function(){
@@ -207,6 +208,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
         latin.focus()
         latin.setSelectionRange(pos, pos + 1);
+        latin.getSelection().collapse(true);
         
        
     });
@@ -215,7 +217,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɓ");
         latin.focus()
         latin.setSelectionRange(pos, pos + 1);
-        latin.getSelection().collapse(latin,pos+1);
+        latin.getSelection().collapse(true);
        
     });
 
@@ -224,7 +226,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɓ");
         latin.focus()
         latin.setSelectionRange(pos, pos + 1);
-        latin.getSelection().collapse(latin,pos+1);
+        latin.getSelection().collapse(true);
        
     });
     d1.addEventListener("dblclick", function(){
@@ -233,7 +235,7 @@
         ////+= this.textContent;
         latin.focus()
         latin.setSelectionRange(pos, pos + 1);
-        latin.getSelection().collapse(latin,pos+1);
+        latin.getSelection().collapse(true);
        
 
     });
@@ -243,7 +245,7 @@
         ////+= this.textContent;
         latin.focus()
         latin.setSelectionRange(pos, pos + 1);
-        latin.getSelection().collapse(latin,pos+1);
+        latin.getSelection().collapse(true);
         
        
 
@@ -253,7 +255,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ƙ");
        latin.focus()
        latin.setSelectionRange(pos, pos + 1);
-       latin.getSelection().collapse(latin,pos+1);
+       latin.getSelection().collapse(true);
 
     }); 
     k1.addEventListener("click", function(){
@@ -261,7 +263,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
         latin.focus();
         latin.getSelection().collapse(latin,pos+1);
-        latin.getSelection().collapse(latin,pos+1);
+        latin.getSelection().collapse(true);
        
 
     }); 
