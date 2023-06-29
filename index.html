@@ -163,7 +163,7 @@
             <textarea name="latina" id="latin" cols="30" rows="10"></textarea>
             
             <div id="ajami">
-                <button class="character" id="y1">copy</button>
+                <button class="character" id="copy">copy</button>
             </div>
 
         </div>
@@ -196,46 +196,62 @@
     }
 
     y1.addEventListener("dblclick", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
         latin.focus()
+        latin.setSelectionRange(pos, pos + 1);
        
     });
     y1.addEventListener("click", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
         latin.focus()
+        latin.setSelectionRange(pos, pos + 1);
+        
        
     });
     b1.addEventListener("dblclick", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɓ");
         latin.focus()
+        latin.setSelectionRange(pos, pos + 1);
        
     });
 
     b1.addEventListener("click", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɓ");
         latin.focus()
+        latin.setSelectionRange(pos, pos + 1);
        
     });
     d1.addEventListener("dblclick", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɗ");
         ////+= this.textContent;
         latin.focus()
+        latin.setSelectionRange(pos, pos + 1);
        
 
     });
     d1.addEventListener("click", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɗ");
         ////+= this.textContent;
         latin.focus()
+        latin.setSelectionRange(pos, pos + 1);
        
 
     });
     k1.addEventListener("dblclick", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ƙ");
        latin.focus()
+       latin.setSelectionRange(pos, pos + 1);
 
     }); 
     k1.addEventListener("click", function(){
+        let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
         latin.focus()
        
