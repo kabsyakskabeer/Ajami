@@ -162,7 +162,9 @@
         <div id="middle">
             <textarea name="latina" id="latin" cols="30" rows="10"></textarea>
             
-            <div id="ajami"></div>
+            <div id="ajami">
+                <button class="character" id="y1">copy</button>
+            </div>
 
         </div>
         <span id="char">
@@ -195,43 +197,71 @@
 
     y1.addEventListener("dblclick", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
+        latin.focus()
        
     });
     y1.addEventListener("click", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƴ");
+        latin.focus()
        
     });
     b1.addEventListener("dblclick", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɓ");
+        latin.focus()
        
     });
 
     b1.addEventListener("click", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɓ");
+        latin.focus()
        
     });
     d1.addEventListener("dblclick", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ɗ");
         ////+= this.textContent;
+        latin.focus()
        
 
     });
     d1.addEventListener("click", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɗ");
         ////+= this.textContent;
+        latin.focus()
        
 
     });
     k1.addEventListener("dblclick", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"Ƙ");
-       
+       latin.focus()
 
     }); 
     k1.addEventListener("click", function(){
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
+        latin.focus()
        
 
     }); 
+    function copyToClipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+        // IE specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData("Text", text); 
+
+    } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = text;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        } catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return false;
+        } finally {
+            document.body.removeChild(textarea);
+        }
+    }
+}
     window.addEventListener("load", function(){
         fetch('dictionary.json')
             .then(response => {
