@@ -269,7 +269,7 @@
         let pos = doGetCaretPosition(latin);
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ƙ");
         latin.focus();
-        latin.getSelection().selectioRange(pos,pos+1);
+        latin.selectioRange(pos,pos+1);
         window.getSelection().collapseToEnd();
        
 
