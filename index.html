@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajami converter</title>
     <style>
+
+        body{
+            background-color: bisque;
+        }
     
 
 
@@ -197,7 +201,7 @@
         return array.indexOf(value) > -1;
     }
     ajami.addEventListener('dblclick',function(){
-        copyToClipboard(ajami.text);
+        navigator.clipboard.writeText(this.text);
     });
     
 
