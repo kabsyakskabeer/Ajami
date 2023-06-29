@@ -174,7 +174,7 @@
             <button class="character" id="d1">Ɗ</button>
             <button class="character" id="k1">Ƙ</button>
             <button class="character" id="y1">ƴ</button>
-            <button class="character" id="copy">Ɗauki</button>
+            <button class="character" id="copy">Ɗauki Ajami</button>
         </span>
         
     </main>
@@ -186,7 +186,7 @@
 
     let latin = document.getElementById("latin");
     let ajami = document.getElementById("ajami");
-    let converter = document.getElementById("czxconverter");
+    let converter = document.getElementById("converter");
     let y1 = document.getElementById("y1");
     let b1 = document.getElementById("b1");
     let d1 = document.getElementById("d1");
@@ -196,7 +196,7 @@
     function isInArray(value, array) {
         return array.indexOf(value) > -1;
     }
-   // copyToClipboard(ajami.text);
+    copyToClipboard(ajami.text);
 
     y1.addEventListener("dblclick", function(){
         let pos = doGetCaretPosition(latin);
@@ -229,7 +229,7 @@
         latin.value = insertAtAjami(latin.value,doGetCaretPosition(latin),"ɓ");
         latin.focus();
         latin.setSelectionRange(pos, pos + 1);
-        window.getSelection().collapse(true);
+        window.getSelection().collapseToEnd();
        
     });
     d1.addEventListener("dblclick", function(){
