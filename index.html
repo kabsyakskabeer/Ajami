@@ -196,7 +196,9 @@
     function isInArray(value, array) {
         return array.indexOf(value) > -1;
     }
-    ajami.addEventListener('dblclick',copyToClipboard(ajami.text));
+    ajami.addEventListener('dblclick',function(){
+        copyToClipboard(ajami.text);
+    });
     
 
     y1.addEventListener("dblclick", function(){
